@@ -8,5 +8,12 @@ requirejs.config({
 
 require(["jquery", "mustache", "text!../templates/madlibs.tmpl"],
         function(jquery, mustache, madlibs_template) {
-    $('body').html(mustache.render(madlibs_template, {}));
+
+    var data = {proper_noun: "Batman",
+                verbing: "skateboarding",
+                location: "office park",
+                time_period: "eon"};
+
+    $('body').html(mustache.render(madlibs_template, data));
+
 });
