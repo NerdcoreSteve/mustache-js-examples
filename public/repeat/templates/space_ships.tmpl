@@ -1,7 +1,22 @@
-<table>
+<table border="1">
+    <h3>Space Ships</h3>
+    <tr>
+        <td>Ship Name</td>
+        <td>Universe</td>
+        <td>Radness</td>
+    </tr>
     {{#space_ships}}
     <tr>
         <td>{{name}}</td>
+        <td>{{universe}}</td>
+        <td>{{radness}}</td>
+    </tr>
+    {{/space_ships}}
+    {{^space_ships}}
+    <tr>
+        <td>none</td>
+        <td>none</td>
+        <td>none</td>
     </tr>
     {{/space_ships}}
 </table>
